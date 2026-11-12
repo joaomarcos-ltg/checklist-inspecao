@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist de Inspeção & Pátio | Legião Técnica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- Faixa Superior Padronizada (Utilidades & Campo) -->
+  <div class="bg-emerald-500/10 border-b border-emerald-500/20 text-emerald-400 text-xs py-2 px-4 text-center font-medium">
+    <i class="fa-solid fa-clipboard-check mr-1.5"></i>
+    <span>Utilidades Técnicas, Campo & Inspeção de Equipamentos | Legião Técnica - Guaiçara e Região</span>
+  </div>
+
+  <!-- Header Padronizado -->
+  <header class="border-b border-slate-800 bg-slate-900/70 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <a href="https://checklist.legiaotecnica.com.br" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20 group-hover:border-emerald-500/40 transition">
+          <i class="fa-solid fa-clipboard-check text-lg"></i>
+        </div>
+        <div>
+          <span class="text-base font-bold text-white tracking-wide block leading-tight">Legião Técnica</span>
+          <span class="text-[11px] text-emerald-400 font-semibold uppercase tracking-wider">Utilidades & Inspeção</span>
+        </div>
+      </a>
+
+      <!-- Botões alinhados à direita -->
+      <div class="flex items-center gap-2">
+        <a href="https://www.legiaotecnica.com.br"
+          class="text-xs text-slate-300 hover:text-white font-medium transition flex items-center gap-1.5 border border-slate-800 hover:border-slate-700 bg-slate-900 px-3 py-1.5 rounded-xl">
+          <i class="fa-solid fa-house text-emerald-400"></i>
+          <span>Home</span>
+        </a>
+        <a href="https://apps.legiaotecnica.com.br"
+          class="text-xs text-slate-300 hover:text-white font-medium transition flex items-center gap-1.5 border border-slate-800 hover:border-slate-700 bg-slate-900 px-3 py-1.5 rounded-xl">
+          <i class="fa-solid fa-arrow-left text-[11px]"></i>
+          <span>Central de Apps</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="max-w-4xl mx-auto px-4 py-10 flex-1 w-full space-y-8">
+
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3">
+        <i class="fa-solid fa-shield-virus"></i>
+        Gestão de Sinistros & Conformidade Mecânica
+      </span>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
+        Checklist de <span class="text-emerald-400">Inspeção & Pátio</span>
+      </h1>
+      <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+        Registo formal de saída e retorno de máquinas e equipamentos (modelo Roçadeira 2T). Valide o estado dos componentes e emita o comprovativo técnico via WhatsApp.
+      </p>
+    </div>
+
+    <!-- IDENTIFICAÇÃO DO REGISTO -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Cliente / Responsável</label>
+          <input type="text" id="clienteChecklist" placeholder="Ex: Chácara Recanto / Roberto Mendes"
+            class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Tipo de Inspeção</label>
+          <select id="tipoInspecao" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
+            <option value="Saída (Pré-Locação)" selected>🟢 Saída / Liberação Técnica (Pré-Uso)</option>
+            <option value="Retorno (Devolução)">🟡 Retorno / Devolução do Cliente (Pós-Uso)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO 1: MECÂNICA & TRANSMISSÃO -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <h2 class="text-sm sm:text-base font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+        <i class="fa-solid fa-wrench text-emerald-400"></i>
+        <span>1. Conjunto Mecânico & Ponteira</span>
+      </h2>
+      <div class="space-y-3 text-xs">
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemGraxa" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Lubrificação da Caixa de Engrenagem (Ponteira)</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Nível de graxa à base de sabão de lítio verificado e abastecido.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemProtetor" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Saia Protetora & Lâmina Limitadora de Fio</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Protetor sem trincas, fixação rígida e lâmina de corte de nylon afiada.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemAperto" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Aperto do Carretel de Nylon / Lâmina de 3 Pontas</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Porca rosca-esquerda com flange contra-travada e sem folgas no eixo.</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- SEÇÃO 2: MOTORIZAÇÃO & COMBUSTÍVEL -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <h2 class="text-sm sm:text-base font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+        <i class="fa-solid fa-gas-pump text-emerald-400"></i>
+        <span>2. Motor, Carburação & Mistura 2T</span>
+      </h2>
+      <div class="space-y-3 text-xs">
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemCombustivel" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Mistura de Combustível Proporcional (Óleo 2T)</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Tanque abastecido estritamente com dosagem 1:50 sintético ou 1:25 mineral.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemFiltro" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Elemento Filtrante de Ar</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Espuma limpa, sem saturação de pó ou excesso de óleo carburado.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemPartida" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Sistema de Arranque & Cordinha Retrátil</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Recolhimento suave, mola tensora firme e bulbo injetor sem rachaduras.</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- SEÇÃO 3: SEGURANÇA & EPIS -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <h2 class="text-sm sm:text-base font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+        <i class="fa-solid fa-user-shield text-emerald-400"></i>
+        <span>3. Controlos & EPIs Acompanhantes</span>
+      </h2>
+      <div class="space-y-3 text-xs">
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemComandos" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Interruptor Liga/Desliga & Trava do Acelerador</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Desligamento elétrico imediato em marcha lenta e gatilho sem emperramento.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" id="itemEpis" class="check-item rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4 mt-0.5" checked>
+          <div>
+            <span class="font-bold text-white">Kit EPIs Fornecido ao Locatário</span>
+            <p class="text-slate-500 text-[11px] mt-0.5">Viseira facial, protetor auricular tipo concha e perneiras entregues em mãos.</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- BOTÃO DE DISPARO -->
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 text-center space-y-3 shadow-xl">
+      <h3 class="text-sm font-bold text-white">Finalizar Inspeção e Emitir Laudo</h3>
+      <p class="text-xs text-slate-400 max-w-md mx-auto">
+        Gera o texto com os itens inspecionados, data e hora para arquivamento ou envio ao cliente no WhatsApp.
+      </p>
+      <button onclick="enviarRelatorioWhatsApp()"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition duration-200 shadow-lg shadow-emerald-500/20">
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        <span>Enviar Relatório de Inspeção via WhatsApp</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Rodapé Padrão -->
+  <footer class="border-t border-slate-800 bg-slate-950 pt-8 pb-6 text-xs text-slate-400">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+      <p>Legião Técnica Group © Direitos Reservados • Utilidades & Inspeção Técnica</p>
+      <div class="flex items-center gap-3">
+        <a href="https://apps.legiaotecnica.com.br" class="hover:text-slate-300 transition">Central de Apps</a>
+        <span>•</span>
+        <a href="https://sites.legiaotecnica.com.br" class="hover:text-slate-300 transition">Soluções Web Sob Demanda</a>
+        <span>•</span>
+        <a href="https://www.legiaotecnica.com.br" class="hover:text-slate-300 transition">Portal LTG</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function enviarRelatorioWhatsApp() {
+      const cliente = document.getElementById('clienteChecklist').value.trim() || "Cliente Balcão";
+      const tipo = document.getElementById('tipoInspecao').value;
+      const dataHora = new Date().toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+
+      const checkGraxa = document.getElementById('itemGraxa').checked ? '✅ Lubrificação Caixa de Engrenagem: OK' : '⚠️ Lubrificação: PENDENTE';
+      const checkProtetor = document.getElementById('itemProtetor').checked ? '✅ Saia Protetora e Limitador: OK' : '⚠️ Saia Protetora: PENDENTE';
+      const checkAperto = document.getElementById('itemAperto').checked ? '✅ Fixação Lâmina/Carretel: OK' : '⚠️ Fixação: PENDENTE';
+      const checkCombustivel = document.getElementById('itemCombustivel').checked ? '✅ Mistura Óleo 2T Proporcional: OK' : '⚠️ Combustível: PENDENTE';
+      const checkFiltro = document.getElementById('itemFiltro').checked ? '✅ Filtro de Ar: OK' : '⚠️ Filtro de Ar: PENDENTE';
+      const checkPartida = document.getElementById('itemPartida').checked ? '✅ Arranque e Bulbo Injetor: OK' : '⚠️ Arranque: PENDENTE';
+      const checkComandos = document.getElementById('itemComandos').checked ? '✅ Chave Liga/Desliga e Gatilho: OK' : '⚠️ Comandos: PENDENTE';
+      const checkEpis = document.getElementById('itemEpis').checked ? '✅ Kit EPIs Entregues: SIM' : '⚠️ Kit EPIs: NÃO ENTREGUE';
+
+      const numeroComercial = "5514996481365";
+
+      const texto = 
+`📋 *RELATÓRIO DE INSPEÇÃO TÉCNICA — ROÇADEIRA 2T*
+*Legião Técnica • Utilidades & Campo*
+
+• *Cliente/Obra:* ${cliente}
+• *Tipo:* ${tipo}
+• *Data/Hora:* ${dataHora}
+
+*Itens Verificados:*
+${checkGraxa}
+${checkProtetor}
+${checkAperto}
+${checkCombustivel}
+${checkFiltro}
+${checkPartida}
+${checkComandos}
+${checkEpis}
+
+_Equipamento testado e validado conforme especificações técnicas._`;
+
+      window.open(`https://api.whatsapp.com/send?phone=${numeroComercial}&text=${encodeURIComponent(texto)}`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
